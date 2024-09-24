@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Gyan Tutorial</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #f0f0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #d63031;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header input[type="search"] {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 5px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+        nav {
+            background-color: #fdcb6e;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            margin: 0 15px;
+            color: #2d3436;
+            font-size: 1.2rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        main {
+            display: flex;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .content {
+            flex: 2;
+            padding-right: 20px;
+        }
+        aside {
+            flex: 1;
+            background-color: #ffeaa7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 20px;
+            text-align: center;
+        }
+        .ad-space {
+            background-color: #d63031;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+        footer {
+            background-color: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #e74c3c;
+        }
+        h3 {
+            color: #3498db;
+        }
+        .code {
+            background-color: #ffeaa7;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin-bottom: 20px;
+        }
+        .meme {
+            font-style: italic;
+            color: #d63031;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Java Tutorial</h1>
+    </header>
+
+    <nav>
+        <a onclick="showSection('history')">History of Java</a>
+        <a onclick="showSection('variables')">Variables</a>
+        <a onclick="showSection('loops')">Loops</a>
+        <a onclick="showSection('oops')">OOPs Concepts</a>
+        <a onclick="showSection('strings')">Strings</a>
+        <a onclick="showSection('collections')">Collections</a>
+    </nav>
+
+    <main>
+        <div class="content">
+
+            <!-- History of Java Section -->
+            <section id="history">
+                <h2>History of Java – Kaise hua iska janam?</h2>
+                <p>1991 mein, **James Gosling aur uske team** ne ek aisa language banaya jo ekdum different tha. **Sun Microsystems** mein is language ka janam hua, aur pehle uska naam tha **Oak**. Oak se phir hua **Java**, aur ye ban gaya duniya ka ekdum popular language. Java ka asli reason tha ki koi bhi program ek se zyada platform pe bina problem ke chale – jaise ki Windows, Mac, aur Linux pe ek hi program easily kaam kare.</p>
+                <p class="meme">"Ek baar likh, har jagah chal!"</p>
+
+                <h3>Java Ke Buzzwords:</h3>
+                <ul>
+                    <li><strong>Simple:</strong> Easy to learn for professional programmers, especially C/C++ developers.</li>
+                    <li><strong>Secure:</strong> Java is designed for web and network environments where security is a major concern.</li>
+                    <li><strong>Portable:</strong> Write once, run anywhere.</li>
+                    <li><strong>Object-Oriented:</strong> Everything in Java revolves around objects.</li>
+                    <li><strong>Robust:</strong> Built with memory management and error handling in mind.</li>
+                    <li><strong>Multithreaded:</strong> Can handle multiple tasks at the same time.</li>
+                    <li><strong>Distributed:</strong> Designed for networking and remote method invocation (RMI).</li>
+                </ul>
+            </section>
+
+            <!-- Variables Section -->
+            <section id="variables" style="display: none;">
+                <h2>Variables aur Data Types – Bhidu, pocket mein kya rakhega?</h2>
+                <p>Java mein variables ka matlab hota hai tera "data storage". Jaise tu apne pockets mein paise, phone, aur gum rakhta hai, waise hi variables mein alag-alag type ka data rakha jata hai. Ab sun:</p>
+
+                <h3>1. int – Integer (Whole Numbers)</h3>
+                <p>Yeh tere normal numbers ke liye hota hai. Example: <code>int age = 25;</code>. Toh jab tu apni umar ya marks store karega, toh "int" ka use karega.</p>
+                <p class="meme">"Abey yeh int ka data bada solid hai, zero point point ka tension nahi!"</p>
+
+                <h3>2. float – Floating Point Numbers (Chhote Chhote Decimal Values)</h3>
+                <p>Yeh tere decimal ke liye hota hai. Jaise ki agar tu kisi item ka price store kar raha hai: <code>float price = 99.99f;</code>. Bhai, decimal ka last mein 'f' lagana mandatory hai.</p>
+                <p class="meme">"Bhai, price toh fix hai, 'f' laga na bhoolna!"</p>
+
+                <h3>3. double – Bada Decimal Number</h3>
+                <p>Double apna bada bhaisaab hai, bade decimals ko store karta hai. Jaise: <code>double distance = 12345.6789;</code>. Jab zyada precision chahiye, tab double use karna.</p>
+                <p class="meme">"Arey bhai! Double ka double dhamaka! Precision ekdum on point!"</p>
+
+                <h3>4. char – Character</h3>
+                <p>Yeh sirf ek akshar ke liye hota hai, jaise tu apna initial ya grade store karega: <code>char grade = 'A';</code>. Dhyaan rahe, char sirf single letter ko store karega!</p>
+                <p class="meme">"Single hai toh char mein hi fit hoga!"</p>
+
+                <h3>5. boolean – True ya False ka Khel</h3>
+                <p>Isme sirf do value hoti hai – ya toh sach ya jhooth, ya toh true ya false. Example: <code>boolean isCool = true;</code>. Jab koi condition check karni ho, tab boolean ka use hota hai.</p>
+                <p class="meme">"Tera dost cool hai ya nahi? boolean mein check kar!"</p>
+
+                <h3>6. String – Chhota Ya Bada Full Sentence</h3>
+                <p>Yeh apna favorite hai, poora sentence ya naam store karta hai. Example: <code>String naam = "Bhaijaan";</code>. Jab tu text ya naam store karega, toh String ka use hoga.</p>
+                <p class="meme">"String ka bada scene hai, poora naam aur full dialogue store karta hai!"</p>
+
+                <p>Yeh variables tere Java ka base hai, samajh le, without variables Java is like tapri without chai! 😎</p>
+            </section>
+
+            <!-- Loops Section -->
+            <section id="loops" style="display: none;">
+                <h2>Loop ka Chakkar – Kaam Repeat Karna Full Easy!</h2>
+                <p>Life mein jaise tu baar baar ek hi kaam karta hai, waise programming mein bhi loops se repeat karte hain! Loop ka funda hai, jab tak condition true hai, tab tak kaam chalne de.</p>
+                <div class="code">
+                    for (int i = 1; i <= 5; i++) { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Loop chal raha hai, step: " + i); <br>
+                    }
+                </div>
+                <p>Jab tu koch bhi cheez baar baar karna chahta hai, for loop kaam aayega. Jaise, tu 5 baar "hello" bolna chahta hai, toh for loop me kaam pura ho jaayega!</p>
+                <p class="meme">"Abe chal chal! Loop mein ghus ja, kaam khatam hone tak niklega nahi!"</p>
+            </section>
+
+            <!-- OOPs Concepts Section -->
+            <section id="oops" style="display: none;">
+                <h2>OOPs Concepts – Bhai, sab log ke baap yeh!</h2>
+                <p>OOPs ka matlab – Encapsulation, Inheritance, Polymorphism, Abstraction. Yeh sab samjhe bina tu Java ka asli game samajh nahi sakta.</p>
+
+                <h3>Encapsulation – Data Chhupane Ka Tareeka</h3>
+                <p>Encapsulation ka matlab hai wrapping data and methods into a single unit, jisse bahar waale tere data ko directly access na kar sake. Public getters aur setters ke through hi private data ko modify kar paayenge. Example dekh:</p>
+                <div class="code">
+                    class Car { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;private String brand; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public void setBrand(String brand) { this.brand = brand; } <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public String getBrand() { return brand; } <br>
+                    }
+                </div>
+                <p class="meme">"Beta, itna encapsulation karo ki duniya confuse ho jaye!"</p>
+
+                <h3>Inheritance – Baap Ka Property Beta Ko Milega</h3>
+                <p>Inheritance ka funda hai, ek class doosri class ke properties aur methods ko inherit kar sakti hai. Jaise tu apne baap ka property apne naam pe likhwa sakta hai. Example:</p>
+                <div class="code">
+                    class Parent { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public void show() { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Baap ka property!"); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                    } <br>
+                    class Child extends Parent { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public void show() { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.show(); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Aur ab beta ka bhi!"); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                    }
+                </div>
+                <p>Yaha `super` keyword use hota hai baap ka method call karne ke liye, aur uske baad beta apna kaam karega.</p>
+                <p class="meme">"Baap ka property sabko nahi milta, inherit karke le bhidu!"</p>
+
+                <h3>Polymorphism – Ek Kaam Alag Tareeke Se</h3>
+                <p>Polymorphism ka matlab hai ek cheez alag-alag tareeke se karna. Java mein do types ke polymorphism hote hain – compile-time aur runtime. Example:</p>
+                <div class="code">
+                    class MathFun { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public int add(int a, int b) { return a + b; } <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;public float add(float a, float b) { return a + b; } <br>
+                    }
+                </div>
+                <p>Method overloading ke through, hum same function ko alag input ke saath use kar sakte hain. Runtime polymorphism ke liye overriding ka use hota hai.</p>
+                <p class="meme">"Ek kaam 2 tareeke se kar, usko bolte hai polymorphism!"</p>
+            </section>
+
+            <!-- Strings Section -->
+            <section id="strings" style="display: none;">
+                <h2>Strings – Java Ke Dialogue Writer</h2>
+                <p>Strings matlab text ya dialogue, Java mein Strings are immutable, yeh ek baar ban jaye toh change nahi hota, naye address pe naya object banta hai. Example:</p>
+                <div class="code">
+                    String s1 = "Bhaijaan";  <br>
+                    s1 = "Sallu"; <br>
+                    System.out.println(s1); // Output: Sallu
+                </div>
+                <p>Jab tu "Bhaijaan" ko "Sallu" banaya, toh naya object ban gaya. Purana string waisa ka waisa hi rahega, naya address pe "Sallu" store hoga.</p>
+                <p class="meme">"String se zyada to dialogues change kar leta tu, samjha?"</p>
+            </section>
+
+            <!-- Collections Section -->
+            <section id="collections" style="display: none;">
+                <h2>Collections – Data Ko Sametne Ka Tareeka</h2>
+                <p>Collections ka kaam hai, ek jagah pe data ko store karna. Java Collections framework mein 3 main interfaces hain – List, Set, aur Map. Sabka alag purpose hai.</p>
+
+                <h3>List – Ekdum Line Mein</h3>
+                <p>List ek ordered collection hai, jisme duplicate values allowed hain. Example:</p>
+                <div class="code">
+                    List<String> names = new ArrayList<>(); <br>
+                    names.add("Bhaijaan"); <br>
+                    names.add("Sallu"); <br>
+                    names.add("Bhaijaan"); <br>
+                    System.out.println(names); // Output: [Bhaijaan, Sallu, Bhaijaan]
+                </div>
+                <p>Yeh ekdum line mein store hota hai, aur index ke through access hota hai.</p>
+                <p class="meme">"List mein tu duplicate ho sakta hai, bas line mein lag ja!"</p>
+            </section>
+
+        </div>
+
+        <aside>
+            <div class="ad-space">Yaha teri ad lagegi! Full on promotion kar.</div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>© 2024 Java Tutorial. All rights reserved, Ashish Singh!</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
